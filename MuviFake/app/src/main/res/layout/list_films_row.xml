@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listFilmsRow_RelativeLayout_ParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#949494"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/listFilmsRow_ImageView_ImageFilm"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/listFilmsRow_TextView_NameFilm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_toEndOf="@id/listFilmsRow_ImageView_ImageFilm"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Name Movie" />
+
+        <TextView
+            android:id="@+id/listFilmsRow_TextView_RatingFilm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/listFilmsRow_TextView_NameFilm"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/listFilmsRow_ImageView_ImageFilm"
+            android:drawableStart="@drawable/ic_star_black_24dp"
+            android:gravity="center"
+            android:paddingStart="1dp"
+            android:paddingEnd="3dp"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textStyle="bold"
+            tools:text="Rating" />
+
+    </RelativeLayout>
+
+</FrameLayout>
