@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EJEMPLO BOTONES"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/MainActivity_Button_ClaseAnonima"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/efecto_button"
+        android:text="Boton clase Anonima"></Button>
+
+   <Button
+        android:id="@+id/MainActivity_Button_Implements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Boton usando Implements">
+    </Button>
+
+    <Button
+        android:id="@+id/MainActivity_Button_onClick"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Boton usando onClick"
+        android:onClick="onClick"
+        android:background="@drawable/efecto_button">
+    </Button>
+</LinearLayout>

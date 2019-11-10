@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/SaludoActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SaludoActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/SaludoActivity_TextView_Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Llegaste"
+        android:textSize="35sp"
+        android:layout_centerHorizontal="true">
+    </TextView>
+
+    <TextView
+        android:id="@+id/SaludoActivity_TextView_Descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esta es la ultima pantalla, presiona salir para cerrar la Activity"
+        android:textSize="25sp"
+        android:layout_marginTop="47dp"
+        android:layout_below="@id/SaludoActivity_TextView_Titulo">
+    </TextView>
+
+    <Button
+        android:id="@+id/SaludoActivity_Button_Salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClick">
+    </Button>
+
+
+</RelativeLayout>

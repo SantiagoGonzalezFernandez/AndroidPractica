@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/MainActivity_TextView_Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Componentes de Seleccion"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/MainActivity_CheckBox_Opcion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opcion1">
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/MainActivity_CheckBox_Opcion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opcion2"
+        android:layout_marginBottom="20dp"
+        android:checked="true">
+    </CheckBox>
+
+    <Button
+        android:id="@+id/MainActivity_Button_Validar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Validar"
+        android:onClick="onClick">
+    </Button>
+
+
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_dark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPERACIONES MATEMATICAS"
+        android:textSize="25sp"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/MainActivity_ImageView_Logo"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/logo1"
+        android:layout_marginBottom="20dp">
+    </ImageView>
+
+    <EditText
+        android:id="@+id/MainActivity_EditText_NumeroUno"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@android:color/background_light"
+        android:hint="Ingrese el numero 1"
+        android:layout_marginBottom="20dp">
+    </EditText>
+
+    <EditText
+        android:id="@+id/MainActivity_EditText_NumeroDos"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@android:color/background_light"
+        android:hint="Ingrese el numero 2">
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/MainActivity_Button_Sumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:onClick="onClick">
+        </Button>
+
+        <Button
+            android:id="@+id/MainActivity_Button_Restar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/MainActivity_Button_Sumar"
+            android:textColor="@android:color/holo_blue_dark"
+            android:onClick="onClick">
+        </Button>
+
+        <Button
+            android:id="@+id/MainActivity_Button_Multiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/MainActivity_Button_Restar"
+            android:textColor="@android:color/holo_blue_dark"
+            android:onClick="onClick">
+        </Button>
+
+        <Button
+            android:id="@+id/MainActivity_Button_Dividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/MainActivity_Button_Multiplicar"
+            android:textColor="@android:color/holo_blue_dark"
+            android:onClick="onClick">
+        </Button>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/MainActivity_TextView_Resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado:"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp">
+    </TextView>
+
+</LinearLayout>

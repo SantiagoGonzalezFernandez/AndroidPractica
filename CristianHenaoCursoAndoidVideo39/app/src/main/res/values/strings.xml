@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PruebaDesdeCero</string>
+    <string name="TextView_Titulo">BIENVENIDO AL EJEMPLO</string>
+    <string name="Button_Ingresar">Ingresar Nombre</string>
+    <string name="TextView_NombreRecibido">Hola, Bienvenido, un saludo : </string>
+</resources>

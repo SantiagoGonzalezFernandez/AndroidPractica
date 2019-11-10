@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:text="@string/TextView_Titulo"
+        android:textSize="25sp"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:id="@+id/MainActivity_EditText_Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su nombre"></EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/MainActivity_Button_Ingresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:onClick="onClick"
+            android:text="@string/Button_Ingresar"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="0.25">
+        </Button>
+
+        <Button
+            android:id="@+id/MainActivity_Button_Enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Enviar"
+            android:layout_weight="0.40">
+        </Button>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/MainActivity_TextView_NombreRecibido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TextView_NombreRecibido"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+</LinearLayout>

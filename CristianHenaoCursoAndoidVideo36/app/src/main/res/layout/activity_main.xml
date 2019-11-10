@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/MainActivity_TextView_Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Componentes de Seleccion"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
+    </TextView>
+
+    <Switch
+        android:id="@+id/MainActivity_Switch_Opcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opcion"
+        android:onClick="onClick">
+    </Switch>
+
+    <TextView
+        android:id="@+id/MainActivity_TextView_Estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado:"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp">
+    </TextView>
+</LinearLayout>

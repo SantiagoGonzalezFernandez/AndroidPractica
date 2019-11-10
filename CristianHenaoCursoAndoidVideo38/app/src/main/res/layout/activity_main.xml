@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/MainActivity_TextView_Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIENVENIDO"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/MainActivity_ImageView_Logo"
+        android:layout_width="280dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true">
+    </ImageView>
+
+    <Button
+        android:id="@+id/MainActivity_Button_Siguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClick">
+    </Button>
+
+</RelativeLayout>

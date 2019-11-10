@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/MainActivity_TextView_Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMPONENTES DE TEXTO"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:background="@color/colorAccent">
+    </TextView>
+
+    <EditText
+        android:id="@+id/MainActivity_EditText_Documento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el documento"
+        android:inputType="number"
+        android:layout_marginBottom="20dp">
+    </EditText>
+
+    <EditText
+        android:id="@+id/MainActivity_EditText_Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el nombre"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp">
+    </EditText>
+
+    <EditText
+        android:id="@+id/MainActivity_EditText_Texto"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:hint="Ingrese el texto"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_marginBottom="30dp">
+    </EditText>
+
+    <Button
+        android:id="@+id/MainActivity_Button_Ingresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresar"
+        android:onClick="onClick">
+    </Button>
+
+
+</LinearLayout>
