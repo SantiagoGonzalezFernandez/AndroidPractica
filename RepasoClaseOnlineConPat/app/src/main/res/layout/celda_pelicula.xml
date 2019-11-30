@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/CeldaPelicula_ImageView_ImagenPelicula"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/CeldaPelicula_TextView_TituloPelicula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Titulo"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/CeldaPelicula_TextView_SinopsisPelicula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Sinopsis"/>
+
+    </LinearLayout>
+
+</LinearLayout>
