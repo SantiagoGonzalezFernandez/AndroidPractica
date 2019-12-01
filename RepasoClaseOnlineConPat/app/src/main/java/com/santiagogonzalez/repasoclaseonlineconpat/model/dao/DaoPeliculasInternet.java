@@ -1,5 +1,7 @@
 package com.santiagogonzalez.repasoclaseonlineconpat.model.dao;
 
+import com.santiagogonzalez.repasoclaseonlineconpat.model.pojo.Detalle;
+import com.santiagogonzalez.repasoclaseonlineconpat.model.pojo.Pelicula;
 import com.santiagogonzalez.repasoclaseonlineconpat.model.pojo.PeliculaContainer;
 import com.santiagogonzalez.repasoclaseonlineconpat.util.PeliculasService;
 import com.santiagogonzalez.repasoclaseonlineconpat.util.ResultListener;
@@ -41,6 +43,21 @@ public class DaoPeliculasInternet {
                 t.printStackTrace();
             }
         });
+    }
 
+    public void traerUnaPeliculaPorId(final ResultListener<Detalle> escuchadorDelController, String idDeLaPelicula){
+        Call<Detalle> detalleCall = peliculasService.getUnaPelicula(idDeLaPelicula, API_KEY);
+        detalleCall.enqueue(new Callback<Detalle>() {
+            @Override
+            public void onResponse(Call<Detalle> call, Response<Detalle> response) {
+                Detalle body = response.body();
+                escuchadorDelController.finish(body);
+            }
+
+            @Override
+            public void onFailure(Call<Detalle> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
     }
 }

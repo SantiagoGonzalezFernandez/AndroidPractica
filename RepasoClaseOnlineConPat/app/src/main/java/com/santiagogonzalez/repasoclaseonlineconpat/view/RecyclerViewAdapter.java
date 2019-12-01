@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,9 +20,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static final String IMAGEN_BASE_URL = "http://image.tmdb.org/t/p/original";
     private List<Pelicula> peliculaList;
+    private EscuchadorCelda escuchadorCelda;
 
-    public RecyclerViewAdapter(List<Pelicula> peliculaList) {
+    public RecyclerViewAdapter(List<Pelicula> peliculaList, EscuchadorCelda escuchadorCelda) {
         this.peliculaList = peliculaList;
+        this.escuchadorCelda = escuchadorCelda;
     }
 
     public void actualizarLista(List<Pelicula> peliculaList){
@@ -55,11 +58,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private TextView myTextViewTituloPelicula;
         private TextView myTextViewSinopsisPelicula;
 
-        public PeliculasViewHolder(@NonNull View itemView) {
+        public PeliculasViewHolder(@NonNull final View itemView) {
             super(itemView);
             myImageViewPosterPelicula = itemView.findViewById(R.id.CeldaPelicula_ImageView_ImagenPelicula);
             myTextViewSinopsisPelicula = itemView.findViewById(R.id.CeldaPelicula_TextView_SinopsisPelicula);
             myTextViewTituloPelicula = itemView.findViewById(R.id.CeldaPelicula_TextView_TituloPelicula);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Pelicula pelicula  = peliculaList.get(getAdapterPosition());
+                    escuchadorCelda.eligieronUnaCelda(pelicula);
+                }
+            });
         }
 
         public void bindPelicula(Pelicula pelicula){
@@ -67,5 +77,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             myTextViewTituloPelicula.setText(pelicula.getStringTituloPelicula());
             myTextViewSinopsisPelicula.setText(pelicula.getStringSinopsisPelicula());
         }
+    }
+
+    public interface EscuchadorCelda{
+        public void eligieronUnaCelda(Pelicula pelicula);
     }
 }
